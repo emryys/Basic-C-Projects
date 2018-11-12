@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int check_polindrom(int x)
+{
+	int a[6];
+	int i,n;
+	n=x;
+	for (i=0;i<6;i++)
+	{
+		a[i]=n%10;
+		n /= 10;
+	}
+	if (a[0]==a[5] && a[1]==a[4] && a[2]==a[3])
+		return 1;
+	
+	else 
+		return 0;
+}
+
+int main()
+{
+	int a,i,x=99,y=99,z=99;
+	 for (i=0;;i++)
+	 {
+	 	if (i%3==0)
+	 	{
+	 		a=check_polindrom(x*y*z);
+	 		x--;
+	 		if (a==1)
+	 		{
+	 			printf("%d",x*y*z);
+	 			return 0;
+			 }
+		}
+	 	if (i%3==1)
+	 	{
+	 	a=check_polindrom(x*y*z);
+	 		y--;
+	 		if (a==1)
+	 		{
+	 			printf("%d",x*y*z);
+	 			return 0;
+			 }	
+		 }
+		 if (i%3 ==2)
+		 {
+		 	a=check_polindrom(x*y*z);
+	 		z--;
+	 		if (a==1)
+	 		{
+	 			printf("%d",x*y*z);
+	 			return 0;
+			 }
+		 }
+	 }
+return 0;
+}
