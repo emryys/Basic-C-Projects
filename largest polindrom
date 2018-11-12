@@ -19,38 +19,28 @@ int check_polindrom(int x)
 
 int main()
 {
-	int a,i,x=99,y=99,z=99;
+	int a,i,x=999,y=999;
 	 for (i=0;;i++)
 	 {
-	 	if (i%3==0)
+	 	if (i%2==0)
 	 	{
-	 		a=check_polindrom(x*y*z);
+	 		a=check_polindrom(x*y);
 	 		x--;
 	 		if (a==1)
 	 		{
-	 			printf("%d",x*y*z);
+	 			printf("%d",x*y);
 	 			return 0;
 			 }
 		}
-	 	if (i%3==1)
+	 	if (i%2==1)
 	 	{
-	 	a=check_polindrom(x*y*z);
+	 	a=check_polindrom(x*y);
 	 		y--;
 	 		if (a==1)
 	 		{
-	 			printf("%d",x*y*z);
+	 			printf("%d",x*y);
 	 			return 0;
 			 }	
-		 }
-		 if (i%3 ==2)
-		 {
-		 	a=check_polindrom(x*y*z);
-	 		z--;
-	 		if (a==1)
-	 		{
-	 			printf("%d",x*y*z);
-	 			return 0;
-			 }
 		 }
 	 }
 return 0;
